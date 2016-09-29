@@ -1,0 +1,16 @@
+extends ./layout.jade
+block content
+    #categories.container
+        .text-vcenter
+            h1 Beer Soap Categories
+    .container
+        .row
+            .flexcontainer
+                each product in category.products
+                    a(href="/product" + product.url)
+                        .bigitem(style=" border: 1px solid black;background-color: cornsilk;")
+                            img.card-img-top(src=""+product.backgroundImage+"", alt='Card image cap').smallitem
+                            .card-block
+                                h4.card-title !{product.name}
+                                span.card-text(style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;width: 100px;")
+                                | !{product.description}

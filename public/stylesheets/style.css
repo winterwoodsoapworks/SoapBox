@@ -1,0 +1,224 @@
+.navbar {
+  z-index: 1000;
+  width: 100%;
+  position: fixed;
+}
+
+
+/* general styles */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+
+/* padded section */
+
+.pad-section {
+  padding: 50px 0;
+}
+
+.pad-section img {
+  width: 100%;
+}
+
+
+/* vertical-centered text */
+
+.text-vcenter {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.text-vcenter h1 {
+  font-size: 4.5em;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  color: whitesmoke;
+}
+
+.text-vcenter h3 {
+  color: gainsboro;
+  font-weight: bold;
+}
+
+
+/* additional sections */
+
+#home {
+  background: url(/static/images/home.jpg) no-repeat center center fixed;
+  display: table;
+  height: 740px;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#categories {
+  background: url(/static/images/home.jpg) no-repeat center center fixed;
+  display: table;
+  height: 200px;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.categories {
+  background-position: center !important;
+  min-height: 250px;
+}
+
+#services {
+  background-color: #306d9f;
+  color: #ffffff;
+}
+
+#services .glyphicon {
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 60px;
+  height: 140px;
+  line-height: 140px;
+  text-align: center;
+  vertical-align: middle;
+  width: 140px;
+}
+
+#information {
+  background: url(/static/images/soap.jpg) no-repeat center center fixed;
+  display: table;
+  height: 800px;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#information .panel {
+  opacity: 0.85;
+}
+
+#google_map {
+  height: 500px;
+}
+
+footer {
+  padding: 20px 0;
+}
+
+footer .glyphicon {
+  color: #333333;
+  font-size: 60px;
+}
+
+footer .glyphicon:hover {
+  color: #306d9f;
+}
+
+/* On the flex container */
+.flexcontainer {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   /* You can set flex-wrap and flex-direction individually */
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   /* tweak the where items line up on the row */
+   /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+   -webkit-align-content: flex-end;
+   align-content: flex-end;
+}
+
+.bigitem {
+   /* This will be twice as big as the small item. */
+   -webkit-flex: 2 0 0; 
+   flex: 2 0 0; 
+}
+.smallitem {
+   -webkit-flex: 1 0 0;
+   flex: 1 0 0;
+}
+
+.card {
+  float: left;
+  width: 33.333%;
+  padding: .75rem;
+  margin-bottom: 2rem;
+  border: 1px;
+  min-height: 325px;
+}
+
+@media (max-width: 399px) {
+  .card {
+    float: left;
+    width: 100%;
+    padding: .75rem;
+    margin-bottom: 2rem;
+    border: 1px;
+    min-height: 325px;
+  }
+}
+
+@media (min-width: 400px) {
+  .card {
+    float: left;
+    width: 50%;
+    padding: .75rem;
+    margin-bottom: 2rem;
+    border: 1px;
+    min-height: 325px;
+  }
+}
+
+@media (min-width: 600px) {
+  .card {
+    float: left;
+    width: 25%;
+    padding: .75rem;
+    margin-bottom: 2rem;
+    border: 1px;
+    min-height: 325px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .card {
+    float: left;
+    width: 20%;
+    padding: .75rem;
+    margin-bottom: 2rem;
+    border: 1px;
+    min-height: 325px;
+  }
+}
+
+.card> img {
+  margin-bottom: .75rem;
+}
+
+.card-text {
+  font-size: 85%;
+}
