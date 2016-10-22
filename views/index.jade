@@ -18,6 +18,47 @@ block content
             p.lead
               | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum metus et ligula venenatis, at rhoncus nisi molestie. Pellentesque porttitor elit suscipit massa laoreet metus.
     // /second section
+    // products
+    //- #myCarousel.carousel.slide(data-ride='carousel')
+    //-   // Indicators
+    //-   //- ol.carousel-indicators
+    //-   //-   li.active(data-target='#myCarousel', data-slide-to='0')
+    //-   //-   li(data-target='#myCarousel', data-slide-to='1')
+    //-   //-   li(data-target='#myCarousel', data-slide-to='2')
+    //-   //-   li(data-target='#myCarousel', data-slide-to='3')
+    //-   // Wrapper for slides
+    //-   .carousel-inner(role='listbox')
+    //-     .item.active
+    //-       img(src='/static/images/categories/starfish.jpg', alt='Chania')
+    //-     .item
+    //-       img(src='/static/images/categories/dolphin.jpg', alt='Chania')
+    //-     .item
+    //-       img(src='/static/images/categories/Beach.jpg', alt='Flower')
+    //-     .item
+    //-       img(src='/static/images/categories/turtle.jpg', alt='Flower')
+    //-   // Left and right controls
+    //-   a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
+    //-     span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+    //-     span.sr-only Previous
+    //-   a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
+    //-     span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+    //-     span.sr-only Next
+    hr
+    #cbp-so-scroller.cbp-so-scroller
+      each item in categories
+        section.cbp-so-section
+          // bg
+          input(type='hidden', value='/static/images/categories/dolphin.jpg')
+          article.cbp-so-side.cbp-so-side-left
+            a(target='_blank', href='/static/images/categories/dolphin.jpg')
+              h2 !{item.name}
+            p
+              | !{item.description}
+          figure.cbp-so-side.cbp-so-side-right
+            a(target='_blank', href='' + item.url + '')
+              img(src='' + item.primaryImage + '', alt=''+item.url+'')
+    hr    
+    // /products
     // third section - Services
     #services.pad-section
       .container
@@ -48,7 +89,7 @@ block content
     // fourth section - Information
     #information.pad-section.img-responsive
       .container
-        .row
+        .row.mission
           .col-sm-6
             .panel.panel-default
               .panel-heading
@@ -76,4 +117,9 @@ block content
     // /fifth section
     // google map
     #google_map
+      .container
+        .row
+          .col-sm-12.text-center
+            a(href='https://www.google.com/maps/place/West+Palm+Beach,+FL', target='_blank')
+              img.mapImg(src='/static/images/wpb.png')
     // /google map

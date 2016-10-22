@@ -1,6 +1,7 @@
 [{
     "name": "The Beach Collection",
     "backgroundImage": "/static/images/categories/dolphinThumb.jpg",
+    "primaryImage": "/static/images/categories/dolphin.jpg",
     "description": "The Beach Collection smells like the beach",
     "url": "/beachcollection",
     "products": [{
@@ -22,41 +23,49 @@
 }, {
     "name": "The Starfish Collection",
     "backgroundImage": "/static/images/categories/starfishThumb.jpg",
+    "primaryImage": "/static/images/categories/starfish.jpg",
     "description": "Some Description",
     "url": "/starfishcollection"
 }, {
     "name": "Category A",
     "backgroundImage": "/static/images/categories/dolphinThumb.jpg",
+    "primaryImage": "/static/images/categories/dolphin.jpg",
     "description": "Some Description",
     "url": ""
 }, {
     "name": "Category B",
     "backgroundImage": "/static/images/categories/starfishThumb.jpg",
+    "primaryImage": "/static/images/categories/starfish.jpg",
     "description": "Some Description",
     "url": ""
 }, {
     "name": "Category C",
     "backgroundImage": "/static/images/categories/dolphinThumb.jpg",
+    "primaryImage": "/static/images/categories/dolphin.jpg",
     "description": "Some Description",
     "url": ""
 }, {
     "name": "Category D",
     "backgroundImage": "/static/images/categories/starfishThumb.jpg",
+    "primaryImage": "/static/images/categories/starfish.jpg",
     "description": "Some Description",
     "url": ""
 }, {
     "name": "Category E",
     "backgroundImage": "/static/images/categories/dolphinThumb.jpg",
+    "primaryImage": "/static/images/categories/dolphin.jpg",
     "description": "Some Description",
     "url": ""
 }, {
     "name": "Category F",
     "backgroundImage": "/static/images/categories/starfishThumb.jpg",
+    "primaryImage": "/static/images/categories/starfish.jpg",
     "description": "Some Description",
     "url": ""
 }, {
     "name": "Category G",
     "backgroundImage": "/static/images/categories/dolphinThumb.jpg",
+    "primaryImage": "/static/images/categories/dolphin.jpg",
     "description": "Some Description",
     "url": ""
 }]

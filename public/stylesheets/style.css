@@ -21,7 +21,10 @@ body {
 }
 
 .pad-section img {
-  width: 100%;
+    max-width: 330px;
+    margin: auto;
+    height: auto;
+    padding: 5%;
 }
 
 
@@ -64,7 +67,7 @@ body {
 }
 
 #categories {
-  background: url(/static/images/home.jpg) no-repeat center center fixed;
+  /*background: url(/static/images/home.jpg) no-repeat center center fixed;*/
   display: table;
   height: 200px;
   position: relative;
@@ -132,34 +135,37 @@ footer .glyphicon:hover {
   color: #306d9f;
 }
 
+
 /* On the flex container */
+
 .flexcontainer {
-   display: -webkit-flex;
-   display: flex;
-   -webkit-align-items: center;
-   align-items: center;
-   -webkit-justify-content: center;
-   justify-content: center;
-   /* You can set flex-wrap and flex-direction individually */
-   -webkit-flex-direction: row;
-   flex-direction: row;
-   -webkit-flex-wrap: wrap;
-   flex-wrap: wrap;
-   justify-content: space-around;
-   /* tweak the where items line up on the row */
-   /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
-   -webkit-align-content: flex-end;
-   align-content: flex-end;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  /* You can set flex-wrap and flex-direction individually */
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* tweak the where items line up on the row */
+  /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+  -webkit-align-content: flex-end;
+  align-content: flex-end;
 }
 
 .bigitem {
-   /* This will be twice as big as the small item. */
-   -webkit-flex: 2 0 0; 
-   flex: 2 0 0; 
+  /* This will be twice as big as the small item. */
+  -webkit-flex: 2 0 0;
+  flex: 2 0 0;
 }
+
 .smallitem {
-   -webkit-flex: 1 0 0;
-   flex: 1 0 0;
+  -webkit-flex: 1 0 0;
+  flex: 1 0 0;
 }
 
 .card {
@@ -215,10 +221,208 @@ footer .glyphicon:hover {
   }
 }
 
-.card> img {
+.card>img {
   margin-bottom: .75rem;
 }
 
 .card-text {
   font-size: 85%;
+}
+
+#products {
+  background-color: lightgrey;
+}
+
+/*.item img {
+  max-width: 60% !important;
+  height: auto !important;
+  margin: auto !important;
+}*/
+
+
+
+
+
+/***** cbpScroller *****/
+/* from http://tympanus.net/codrops/2013/07/18/on-scroll-effect-layout/ */
+.cbp-so-scroller {
+	margin-top: 50px;
+}
+
+.cbp-so-section {
+	/*margin-bottom: 15em;*/
+	position: relative;
+}
+
+/* Clear floats of children */
+.cbp-so-section:before,
+.cbp-so-section:after {
+	content: " ";
+	display: table;
+	
+}
+
+.cbp-so-section:after {
+	clear: both;
+	
+}
+
+/* Text styling */
+
+.cbp-so-section h2 {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	font-size: 7.25vmin;
+	/*font-size: 5em;
+	font-weight: 300;
+	line-height: 1;*/
+}
+
+.cbp-so-section p {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	font-size: 3.25vmin;
+	color: #000;
+	/*font-size: 2em;
+	font-weight: 300;*/
+}
+
+.cbp-so-section img {
+	display: inline-block;
+	max-width: 65vmin;
+	max-height: 65vmin;
+
+    border-radius: 10px;
+	/*font-size: 2em;
+	font-weight: 300;*/
+}
+
+/* Sides */
+.cbp-so-side {
+	width: 45%;
+	float: left;
+	margin: 2%;
+	/*padding: 10px 4%;*/
+	overflow: hidden;
+	min-height: 12em;
+}
+
+/* Clear floats of children */
+.cbp-so-side:before,
+.cbp-so-side:after {
+	content: " ";
+	display: table;
+}
+
+.cbp-so-side:after {
+	clear: both;
+}
+
+.cbp-so-side-right {
+	text-align: left;
+}
+
+.cbp-so-side-left {
+	text-align: right;
+}
+
+.cbp-so-side-right img {
+	float: left;
+}
+
+.cbp-so-side-left img {
+	float: right;
+}
+
+/* Initial state (hidden or anything else) */
+.cbp-so-init .cbp-so-side {
+	opacity: 0;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+}
+
+.cbp-so-init .cbp-so-side-left {
+	-webkit-transform: translateX(-80px);
+	-moz-transform: translateX(-80px);
+	transform: translateX(-80px);
+}
+
+.cbp-so-init .cbp-so-side-right {
+	-webkit-transform: translateX(80px);
+	-moz-transform: translateX(80px);
+	transform: translateX(80px);
+}
+
+/* Animated state */
+/* add you final states (transition) or your effects (animations) for each side */
+.cbp-so-section.cbp-so-animate .cbp-so-side-left,
+.cbp-so-section.cbp-so-animate .cbp-so-side-right {
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	-moz-transition: -moz-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+	opacity: 1;
+}
+
+/* For example, add a delay for the right side:
+.cbp-so-section.cbp-so-animate .cbp-so-side-right {
+	-webkit-transition-delay: 0.2s;
+	-moz-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+*/
+
+/* Example media queries */
+
+@media screen and (max-width: 816px) {
+	.cbp-so-scroller {
+		font-size: 65%;
+	}
+
+	.cbp-so-section h2 {
+		margin: auto;
+		width: 100%;
+	}
+
+	.cbp-so-side img {
+		margin: auto;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 816px) {
+	.cbp-so-side {
+		float: none;
+		width: 100%;
+		margin: auto;
+	}
+
+	.cbp-so-side img {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+
+
+.mission{
+  margin-top: 15%;
+}
+
+.mapImg {    
+  margin-top: 1%;
+    max-height: 450px;
+    border-radius: 10px solid black;
+    border-radius: 20px;
+    border: 1px solid lightgray;
+}
+
+#partners {
+  background-color: lightgray;
+
 }
