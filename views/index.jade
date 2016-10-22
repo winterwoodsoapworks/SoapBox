@@ -53,7 +53,9 @@ block content
             a(target='_blank', href='/static/images/categories/dolphin.jpg')
               h2 !{item.name}
             p
-              | !{item.description}
+              | !{item.description} 
+            p
+              button.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#myModal') Purchase
           figure.cbp-so-side.cbp-so-side-right
             a(target='_blank', href='' + item.url + '')
               img(src='' + item.primaryImage + '', alt=''+item.url+'')
@@ -123,3 +125,17 @@ block content
             a(href='https://www.google.com/maps/place/West+Palm+Beach,+FL', target='_blank')
               img.mapImg(src='/static/images/wpb.png')
     // /google map
+    // Modal
+    #myModal.modal.fade(role='dialog')
+      .modal-dialog
+        // Modal content
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal') ×
+            h4.modal-title item.name
+          .modal-body
+            p item.purchaseHeader
+            p item.purchaseInformation
+            p quantity
+          .modal-footer
+            button.btn.btn-default(type='button', data-dismiss='modal') Close
