@@ -5,20 +5,25 @@
     "description": "The Beach Collection smells like the beach",
     "url": "/beachcollection",
     "products": [{
-        "name": "Product 1",
+        "name": "Palm Trees",
         "backgroundImage": "/static/images/products/product1.jpg",
         "description": "Product 1",
         "url": "/product1"
     }, {
-        "name": "Product 2",
+        "name": "Conch",
         "backgroundImage": "/static/images/products/product2.jpg",
         "description": "Product 2",
         "url": "/product2"
     }, {
-        "name": "Product 3",
+        "name": "Sand Dollar",
         "backgroundImage": "/static/images/products/product3.jpg",
         "description": "Product 3",
         "url": "/product3"
+ }, {
+        "name": "Nautalis",
+        "backgroundImage": "/static/images/products/product3.jpg",
+        "description": "Product 4",
+        "url": "/product4"
     }]
 }, {
     "name": "The Starfish Collection",
